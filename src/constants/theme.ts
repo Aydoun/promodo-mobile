@@ -24,7 +24,14 @@ export const Colors = {
   },
 } as const;
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+/** Accent per timer phase; readable on both light and dark backgrounds. */
+export const PhaseColors = {
+  focus: '#FF6B4A',
+  shortBreak: '#2FB67C',
+  longBreak: '#3C87F7',
+} as const;
+
+export type ThemeColor =keyof typeof Colors.light & keyof typeof Colors.dark;
 
 export const Fonts = Platform.select({
   ios: {
